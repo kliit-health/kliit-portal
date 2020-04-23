@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Build and Deploy kh-portal Docker Image
 
 on:
   push:
@@ -19,4 +19,4 @@ jobs:
       run: docker build --tag kh-portal:ci .
 
     - name: Deploy kh-portal Docker Image to Firebase Hosting
-      run: docker run --rm -it kh-portal:ci
+      run: docker run --rm kh-portal:ci
