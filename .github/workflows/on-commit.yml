@@ -14,5 +14,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag kh-portal:$(date +%s)
+
+    - name: Build kh-portal Docker image
+      run: docker build --tag kh-portal:ci .
+
+    - name: Deploy kh-portal Docker Image to Firebase Hosting
+      run: docker run --rm -it kh-portal:ci
