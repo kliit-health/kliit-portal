@@ -1,0 +1,10 @@
+{
+	"name": "kliit-portal",
+	"version": "1.0.0",
+	"description": "Kliit Health Admin Portal",
+
+	"scripts": {
+		"build": "echo 'building...'",
+		"start": "echo 'starting...'"
+	}
+}
